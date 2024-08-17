@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.posts.length >= 1) {%>
+<% posts.forEach((post) => { %>
+  <div>
+    <a href="/posts/<%= post.id %>"><h3><%= post.title %></a></h3>
+    <span><%= post.date %>, by <%= post.author %></span>
+    <p><%= post.desc %></p>  
+  </div>
+<% }) %>
+
+<% } else { %>
+  <h2>No posts yet 👎</h2>
+<% } %>
+<%- include("partials/footer.ejs") %>

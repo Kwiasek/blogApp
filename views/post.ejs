@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+
+<h1><%= post.title %></h1>
+<% if (locals.username === post.author ){%>
+  <a href="/posts/<%= post.id %>/edit"><button>Edit post</button></a>
+<% } %>
+<span><%= post.date %></span>
+<p>Author: <%= post.author %></p>
+<article><%= post.content %></article>
+
+<%- include("partials/footer.ejs") %>
