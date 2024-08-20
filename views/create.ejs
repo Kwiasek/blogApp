@@ -1,24 +1,24 @@
 <%- include("partials/header.ejs")%>
 
-<form action="/create" method="post">
+<form action="/create" method="post" class="container mb-2">
   <input type="hidden" name="author" value="<%= username %>" />
   <input type="hidden" name="id" value="<%= id %>" />
-  <input type="hidden" name="date" value="<%= date %>"
+  <input type="hidden" name="date" value="<%= date %>" />
   <label for="title">Enter post title:</label>
   <br>
-  <input type="text" name="title" maxlength="30" required/>
+  <input type="text" name="title" maxlength="30" class="form-control" required/>
   <br>
   <label for="desc">
-    Enter short description for your post
+    Enter short description for your post:
   </label>
   <br>
-  <input type="text" name="desc" maxlength="80" />
+  <input type="text" name="desc" maxlength="80" class="form-control"/>
   <br>
-  <label for="content">Enter your content here</label>
+  <label for="content">Enter your content here:</label>
   <br>
-  <textarea name="content" cols="30" rows="10"></textarea>
+  <textarea id="my-expressjs-tinymce-app" name="content">Hello, World!</textarea>
   <br>
-  <button type="submit">Create post!</button>
+  <button type="submit" class="btn btn-primary">Create post!</button>
 </form>
 
 <%- include("partials/footer.ejs")%>

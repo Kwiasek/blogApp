@@ -22,10 +22,12 @@
 
         <div class="text-end">
           <% if (locals.username) {%>
-            <a href="/create"><button type="button" class="btn btn-outline-success">Create</button></a>
+            <div class="d-flex align-items-center gap-3">
+              <p class="m-0">Hi, <%= username %>!</p>
+              <a href="/create"><button type="button" class="btn btn-outline-success">Create</button></a>
+            </div>
             <% } else { %>
               <a href="/login"><button type="button" class="btn btn-outline-success">Login</button></a>
-
           <% } %>
         </div>
       </div>

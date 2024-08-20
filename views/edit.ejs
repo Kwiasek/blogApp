@@ -3,19 +3,19 @@
 <form action="/posts/<%= post.id %>/edit" method="post">
   <label for="title">Enter post title:</label>
   <br>
-  <input type="text" name="title" maxlength="30" required value="<%= post.title %>"/>
+  <input type="text" name="title" maxlength="30" class="form-control" required value="<%= post.title %>"/>
   <br>
   <label for="desc">
     Enter short description for your post
   </label>
   <br>
-  <input type="text" name="desc" maxlength="80" value="<%= post.desc %>"/>
+  <input type="text" name="desc" maxlength="80" class="form-control" value="<%= post.desc %>"/>
   <br>
   <label for="content">Enter your content here</label>
   <br>
-  <textarea name="content" cols="30" rows="10"><%= post.content %></textarea>
+  <textarea id="my-expressjs-tinymce-app" name="content"><%= post.content %></textarea>
   <br>
-  <button type="submit">Create post!</button>
+  <button type="submit" class="btn btn-outline-success">Edit post!</button>
 </form>
 
 <%- include("partials/footer.ejs")%>
